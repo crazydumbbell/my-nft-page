@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'DS-DIGI';
+    src: url("./assets/fonts/DS-DIGI.TTF")
+}
+
+.font-digi {
+    font-family: "DS-DIGI";
+}
+
 body {
   margin: 0;
 }
@@ -12,3 +21,17 @@ video {
   z-index: -1; /*우선순위 후순위 설정*/
 }
 
+.container {
+  max-width: 1280px;
+  margin: auto;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    font-size: 32px;
+
+}
