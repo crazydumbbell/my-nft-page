@@ -87,3 +87,22 @@ function onClickQuotes() {
   quotes.style.display = "none";
   newQuotes.style.display = "block";
 }
+
+async function getNft() {
+  const nftImg = document.querySelector(".nft-img");
+  const nftName = document.querySelector(".nft-name");
+  const nftDesc = document.querySelector(".nft-desc");
+
+  const response = await axios.get(
+    "https://olbm.mypinata.cloud/ipfs/QmZLqD4biZSt9sWmNTzrhgJspeAookR98tuv6RvYrjMiLN"
+    // axios쓰는 법
+    );
+  console.log(response);
+  // F12콘솔창에서 object가 들어와 있음
+  nftImg.src = response.data.image;
+  nftName.innerText=response.data.name;
+  nftDesc.innerText=response.data.desc;
+
+}
+
+getNft();
